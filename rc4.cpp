@@ -22,7 +22,7 @@ public:
     }
 
     char PRGA(std::vector<int>& S, int& i, int& j) {
-        i = (i + 1) % 256;
+        (++i) % 256;
         j = (j + S[i]) % 256;
         std::swap(S[i], S[j]);
         return S[(S[i] + S[j]) % 256];
